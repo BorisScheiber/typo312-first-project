@@ -1,0 +1,14 @@
+base: 'https://typo312-videotraining.ddev.site/'
+languages:
+  -
+    title: Deutsch
+    enabled: true
+    languageId: 0
+    base: /
+    locale: de_AT.utf8
+    navigationTitle: DE
+    flag: at
+    hreflang: ''
+    websiteTitle: ''
+rootPageId: 1
+websiteTitle: ''

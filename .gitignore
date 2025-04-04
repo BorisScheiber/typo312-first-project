@@ -1,0 +1,39 @@
+# === TYPO3 Specific ===
+/public/typo3temp/
+/public/uploads/
+/public/_assets/
+/public/fileadmin/_processed_/
+/public/fileadmin/_temp_/
+/public/typo3/
+/public/typo3conf/LocalConfiguration.php
+/public/typo3conf/AdditionalConfiguration.php
+
+# === Composer ===
+/vendor/
+/composer.lock
+
+# === DDEV ===
+.ddev/db_snapshots/
+.ddev/.importdb
+.ddev/homeadditions/
+.ddev/.dbimageBuild/
+.ddev/.webimageBuild/
+
+
+# === var (TYPO3 runtime) ===
+/var/
+
+# === macOS & Editor ===
+.DS_Store
+.idea/
+/.vscode/
+
+# === Backup / temporäre Dateien ===
+*.log
+*.zip
+*.tar.gz
+*.swp
+*.swo
+*.bak
+*.orig
+*.tmp

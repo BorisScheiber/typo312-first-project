@@ -1,3 +1,45 @@
 page = PAGE
-page.10 = TEXT
-page.10.value = Hello World!
+
+page.meta {
+    viewport = width=device-width, initial-scale=1, shrink-to-fit=no
+}
+
+page.shortcutIcon = EXT:vt12/Resources/Public/Icons/favicon.ico
+page.includeCSS {
+    bootstrap-icons = EXT:vt12/Resources/Public/Css/bootstrap-icons.css
+    styles = EXT:vt12/Resources/Public/Css/styles.css
+    custom = EXT:vt12/Resources/Public/Css/custom.css
+}
+
+page.includeJSFooter {
+    bootstrap = EXT:vt12/Resources/Public/Js/bootstrap.bundle.min.js
+    scripts = EXT:vt12/Resources/Public/Js/scripts.js
+}
+
+
+page.10 = FLUIDTEMPLATE
+page.10 {
+    layoutRootPath = EXT:vt12/Resources/Private/Layouts/
+
+#    file = EXT:vt12/Resources/Private/Templates/Default.html
+
+    file.stdWrap.cObject = CASE
+    file.stdWrap.cObject {
+        key.data = pagelayout
+
+        pagets__layoutwithheader = TEXT
+        pagets__layoutwithheader.value = EXT:vt12/Resources/Private/Templates/Default.html
+
+        default < pagets__layoutwithheader
+    }
+
+    variables {
+        content0 < styles.content.get
+
+        content1 < styles.content.get
+        content1 {
+            select.where = colPos = 1
+        }
+    }
+
+}

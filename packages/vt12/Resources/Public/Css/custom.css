@@ -7,3 +7,23 @@ header.bg-dark h6,
 header.bg-dark p {
     color: #fff;
 }
+
+.nav-current {
+    color: #fff !important;
+}
+
+ul ul .nav-current {
+    background-color: #ccc;
+    color: #212529;
+}
+
+.nav-active {
+    color: #fff;
+}
+.meta-nav-current {
+    color: #D62689 !important;
+}
+
+.link-light:hover {
+    color: #D62689 !important;
+}

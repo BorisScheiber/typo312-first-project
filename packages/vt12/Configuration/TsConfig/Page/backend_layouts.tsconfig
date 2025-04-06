@@ -28,3 +28,26 @@ mod.web_layout.BackendLayouts {
         }
     }
 }
+
+mod.web_layout.BackendLayouts {
+    layoutwithoutheader {
+        title = Layout ohne Header
+        #        icon = content-container-columns-2
+        config {
+            backend_layout {
+                colCount = 1
+                rowCount = 2
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Noormal
+                                colPos = 0
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

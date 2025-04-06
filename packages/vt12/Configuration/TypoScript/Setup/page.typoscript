@@ -20,6 +20,7 @@ page.includeJSFooter {
 page.10 = FLUIDTEMPLATE
 page.10 {
     layoutRootPath = EXT:vt12/Resources/Private/Layouts/
+    partialRootPath = EXT:vt12/Resources/Private/Partials/
 
 #    file = EXT:vt12/Resources/Private/Templates/Default.html
 
@@ -29,6 +30,9 @@ page.10 {
 
         pagets__layoutwithheader = TEXT
         pagets__layoutwithheader.value = EXT:vt12/Resources/Private/Templates/Default.html
+
+        pagets__layoutwithoutheader = TEXT
+        pagets__layoutwithoutheader.value = EXT:vt12/Resources/Private/Templates/WithoutHeader.html
 
         default < pagets__layoutwithheader
     }
@@ -40,6 +44,14 @@ page.10 {
         content1 {
             select.where = colPos = 1
         }
+    }
+
+    settings {
+        rootUid = {$vt12.rootUid}
+        logoFile = {$vt12.logoFile}
+        logoAlt = {$vt12.logoAlt}
+        logoTitle = {$vt12.logoTitle}
+        logoHeight = {$vt12.logoHeight}
     }
 
 }

@@ -1,0 +1,9 @@
+vt12 {
+    rootUid = 1
+    logoFile = EXT:vt12/Resources/Public/Img/logowebsite.png
+    logoAlt = Buntes cooles Bild
+    logoTitle = Navigiere zur startseite
+    logoHeight = 100px
+
+    metaNavPid = 21
+}

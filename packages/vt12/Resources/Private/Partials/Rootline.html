@@ -1,0 +1,27 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:if condition="{settings.rootUid} != {data.uid}">
+
+<nav class="breadcrumb-wrapper container px-5 py-3">
+    <f:for as="item" each="{rootline}" iteration="i">
+        <f:if condition="{item.current}">
+            <span class="breadcrumb-current">{item.title}</span>
+        </f:if>
+        <f:if condition="!{item.current}">
+            <f:link.typolink
+                    class="breadcrumb-link"
+                    parameter="{item.data.uid}"
+                    title="{item.title}">
+                {item.title}
+            </f:link.typolink>
+        </f:if>
+
+        <f:if condition="!{i.isLast}">
+            <span class="breadcrumb-separator">›</span>
+        </f:if>
+    </f:for>
+</nav>
+
+</f:if>
+
+</html>

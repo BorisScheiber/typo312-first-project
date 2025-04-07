@@ -27,3 +27,31 @@ ul ul .nav-current {
 .link-light:hover {
     color: #D62689 !important;
 }
+
+/*Breadcrumb nav*/
+
+.breadcrumb-wrapper {
+    font-size: 0.95rem;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.breadcrumb-link {
+    color: #2E8FA5;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-link:hover {
+    color: #18697d;
+    text-decoration: underline;
+}
+
+.breadcrumb-current {
+    color: #999;
+    font-weight: 500;
+}
+
+.breadcrumb-separator {
+    margin: 0 0.5rem;
+    color: #ccc;
+}

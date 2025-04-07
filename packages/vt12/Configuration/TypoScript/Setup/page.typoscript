@@ -4,7 +4,10 @@ page.meta {
     viewport = width=device-width, initial-scale=1, shrink-to-fit=no
 }
 
+page.bodyTagAdd = class="d-flex flex-column h-100"
+
 page.shortcutIcon = EXT:vt12/Resources/Public/Icons/favicon.ico
+
 page.includeCSS {
     bootstrap-icons = EXT:vt12/Resources/Public/Css/bootstrap-icons.css
     styles = EXT:vt12/Resources/Public/Css/styles.css

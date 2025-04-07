@@ -6,4 +6,6 @@ vt12 {
     logoHeight = 100px
 
     metaNavPid = 21
+
+    copyrightText = Copyright &copy; Meine chiller Firma
 }

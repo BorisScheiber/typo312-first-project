@@ -1,6 +1,13 @@
+# customcategory=vt12=Sitepackage TYPO3 12
+# customsubcategory=logo=Logo der Website
+
 vt12 {
+    # cat = vt12/links; type = int+; label = Rootpage UID: UID der Startseite der Website
     rootUid = 1
+
+    # cat = vt12/logo; type = file; label = Logo-Datei: Pfad zu einer Bilddatei, die als Logo ausgegeben wird
     logoFile = EXT:vt12/Resources/Public/Img/logowebsite.png
+
     logoAlt = Buntes cooles Bild
     logoTitle = Navigiere zur startseite
     logoHeight = 100px

@@ -17,6 +17,7 @@ page.includeCSS {
 page.includeJSFooter {
     bootstrap = EXT:vt12/Resources/Public/Js/bootstrap.bundle.min.js
     scripts = EXT:vt12/Resources/Public/Js/scripts.js
+    fslightbox = EXT:vt12/Resources/Public/Js/fslightbox.js
 }
 
 

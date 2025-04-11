@@ -1,0 +1,23 @@
+plugin.tx_indexedsearch {
+    view {
+        partialRootPaths.100 = EXT:vt12/Resources/Private/Extensions/indexed_search/Partials/
+    }
+    settings {
+        targetPid = {$vt12.searchTargetPid}
+        rootPidList = {$vt12.rootUid}
+    }
+}
+
+
+lib.searchField = RECORDS
+lib.searchField {
+    tables = tt_content
+    source = {$vt12.searchPluginId}
+    dontCheckPid = 1
+}
+
+//[traverse(page, "uid") == {vt12.searchTargetPid}]
+//    lib.searchField >
+//    lib.searchField = TEXT
+//    lib.searchField.value =
+//[END]

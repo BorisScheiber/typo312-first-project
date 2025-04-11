@@ -13,14 +13,17 @@
             <f:if condition="{item.children}">
                 <f:then>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle {f:if(condition: '{item.active}', then: 'nav-active')}" id="navbarDropdown{item.data.uid}" href="#" role="button"
+                        <a class="nav-link dropdown-toggle {f:if(condition: '{item.active}', then: 'nav-active')}"
+                           id="navbarDropdown{item.data.uid}" href="#" role="button"
                            data-bs-toggle="dropdown" aria-expanded="false">{item.title}</a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown{item.data.uid}">
                             <f:for as="item" each="{item.children}">
                                 <li>
-                                    <f:link.typolink class="dropdown-item {f:if(condition: '{item.current}', then: 'nav-current')}" parameter="{item.data.uid}"
-                                                     target="{item.target}"
-                                                     title="{item.title}">{item.title}
+                                    <f:link.typolink
+                                            class="dropdown-item {f:if(condition: '{item.current}', then: 'nav-current')}"
+                                            parameter="{item.data.uid}"
+                                            target="{item.target}"
+                                            title="{item.title}">{item.title}
                                     </f:link.typolink>
                                 </li>
                             </f:for>
@@ -30,40 +33,20 @@
 
                 <f:else>
                     <li class="nav-item">
-                        <f:link.typolink class="nav-link {f:if(condition: '{item.current} || ({item.link} == {f:uri.page()})', then: 'nav-current')}" parameter="{item.data.uid}" target="{item.target}"
-                                         title="{item.title}">{item.title}
+                        <f:link.typolink
+                                class="nav-link {f:if(condition: '{item.current} || ({item.link} == {f:uri.page()})', then: 'nav-current')}"
+                                parameter="{item.data.uid}" target="{item.target}"
+                                title="{item.title}">{item.title}
                         </f:link.typolink>
                     </li>
                 </f:else>
             </f:if>
         </f:for>
-
-
-
-
-        <f:comment>
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-            <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
-            <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button"
-                   data-bs-toggle="dropdown" aria-expanded="false">Blog</a>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
-                    <li><a class="dropdown-item" href="blog-home.html">Blog Home</a></li>
-                    <li><a class="dropdown-item" href="blog-post.html">Blog Post</a></li>
-                </ul>
+        <f:if condition="{data.uid} != {settings.searchTargetPid}">
+            <li>
+                <f:cObject typoscriptObjectPath="lib.searchField"/>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button"
-                   data-bs-toggle="dropdown" aria-expanded="false">Portfolio</a>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
-                    <li><a class="dropdown-item" href="portfolio-overview.html">Portfolio Overview</a></li>
-                    <li><a class="dropdown-item" href="portfolio-item.html">Portfolio Item</a></li>
-                </ul>
-            </li>
-        </f:comment>
+        </f:if>
     </ul>
 
 </div>

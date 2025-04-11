@@ -1,5 +1,6 @@
 # customcategory=vt12=Sitepackage TYPO3 12
 # customsubcategory=logo=Logo der Website
+# customsubcategory=misc=Sonstiges
 
 vt12 {
     # cat = vt12/links; type = int+; label = Rootpage UID: UID der Startseite der Website
@@ -8,11 +9,25 @@ vt12 {
     # cat = vt12/logo; type = file; label = Logo-Datei: Pfad zu einer Bilddatei, die als Logo ausgegeben wird
     logoFile = EXT:vt12/Resources/Public/Img/logowebsite.png
 
+
+    # cat = vt12/logo; type = string; label = Logo-Alt-Text: Alternativtext für das Logo-Bild
     logoAlt = Buntes cooles Bild
+
+    # cat = vt12/logo; type = string; label = Logo-Title: Text beim Mouseover über das Logo
     logoTitle = Navigiere zur startseite
+
+    # cat = vt12/logo; type = string; label = Logo-Höhe: z. B. 100px oder 50%
     logoHeight = 100px
 
+    # cat = vt12/links; type = int+; label = Meta-Navigation PID: Seiten-ID für die Meta-Navigation
     metaNavPid = 21
 
+    # cat = vt12/misc; type = string; label = Copyright-Text im Footer
     copyrightText = Copyright &copy; Meine chiller Firma
+
+    # cat = vt12/links; type = int+; label = Such-Plugin ID: Id des Content Elements für die Suche
+    searchPluginId = 8
+
+    # cat = vt12/links; type = int+; label = Suchseiten ID: ID er Suchergebniss Seite
+    searchTargetPid = 19
 }

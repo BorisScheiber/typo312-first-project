@@ -4,6 +4,18 @@ page.meta {
     viewport = width=device-width, initial-scale=1, shrink-to-fit=no
 }
 
+#page.headerData {
+#    1744297820 = TEXT
+#    1744297820.value = <script>alert('hallo aus dem head')</script>
+#
+#    1744297837 = TEXT
+#    1744297837.value (
+#    <script>
+#    alert('hallo aus dem head 2')
+#    </script>
+#    )
+#}
+
 page.bodyTagAdd = class="d-flex flex-column h-100"
 
 page.shortcutIcon = EXT:vt12/Resources/Public/Icons/favicon.ico
@@ -26,7 +38,7 @@ page.10 {
     layoutRootPath = EXT:vt12/Resources/Private/Layouts/
     partialRootPath = EXT:vt12/Resources/Private/Partials/
 
-#    file = EXT:vt12/Resources/Private/Templates/Default.html
+    #    file = EXT:vt12/Resources/Private/Templates/Default.html
 
     file.stdWrap.cObject = CASE
     file.stdWrap.cObject {
@@ -56,6 +68,7 @@ page.10 {
         logoAlt = {$vt12.logoAlt}
         logoTitle = {$vt12.logoTitle}
         logoHeight = {$vt12.logoHeight}
+        searchTargetPid = {$vt12.searchTargetPid}
     }
 
 }

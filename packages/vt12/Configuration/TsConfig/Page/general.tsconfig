@@ -24,3 +24,5 @@ TCEFORM {
         }
     }
 }
+
+RTE.default.preset = MyPreset

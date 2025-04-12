@@ -1,0 +1,105 @@
+
+renderingOptions:
+  submitButtonLabel: 'Nachricht senden'
+type: Form
+identifier: kontaktformular
+label: Kontaktformular
+prototypeName: standard
+finishers:
+  -
+    options:
+      subject: '{text-3}'
+      recipients:
+        visionvoidmusic@gmail.com: Bobby
+      senderAddress: noreply@boris-scheiber.at
+      senderName: '{text-1} {text-2}'
+      replyToRecipients:
+        '{email-1}': '{text-1} {text-2}'
+      addHtmlPart: true
+      attachUploads: true
+      translation:
+        language: Default
+      title: ''
+    identifier: EmailToReceiver
+  -
+    options:
+      pageUid: '27'
+      additionalParameters: ''
+      fragment: '10'
+    identifier: Redirect
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: 'Previous step'
+      nextButtonLabel: 'Next step'
+    type: Page
+    identifier: page-1
+    label: ''
+    renderables:
+      -
+        properties:
+          text: 'Felder mit * sind Pflichtfelder'
+        type: StaticText
+        identifier: statictext-1
+        label: ''
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-1
+        label: 'Dein Vorname'
+        properties:
+          fluidAdditionalAttributes:
+            placeholder: Max
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-2
+        label: 'Dein Nachname'
+        properties:
+          elementDescription: ''
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-3
+        label: 'Betreff (um was geht es?)'
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Email
+        identifier: email-1
+        label: 'Deine Email Adresse'
+        properties:
+          elementDescription: ''
+          fluidAdditionalAttributes:
+            placeholder: name@domain.at
+            required: required
+        validators:
+          -
+            identifier: EmailAddress
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Textarea
+        identifier: textarea-1
+        label: 'Deine Nachricht'
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: NotEmpty

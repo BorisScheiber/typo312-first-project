@@ -25,12 +25,12 @@ return [
     ],
     'EXTENSIONS' => [
         'backend' => [
-            'backendFavicon' => '',
-            'backendLogo' => '',
-            'loginBackgroundImage' => '',
+            'backendFavicon' => 'EXT:vt12/Resources/Public/Favicons/bs.png',
+            'backendLogo' => 'EXT:vt12/Resources/Public/Favicons/bs.png',
+            'loginBackgroundImage' => 'EXT:vt12/Resources/Public/Img/shadow.svg',
             'loginFootnote' => '',
-            'loginHighlightColor' => '',
-            'loginLogo' => '',
+            'loginHighlightColor' => '#4b47ff',
+            'loginLogo' => 'EXT:vt12/Resources/Public/Favicons/bs-180x180.png',
             'loginLogoAlt' => '',
         ],
         'extensionmanager' => [
@@ -100,7 +100,7 @@ return [
         'defaultMailFromAddress' => 'noreply@typo312-videotraining.ddev.site',
         'defaultMailFromName' => 'TYPO3 Videotraining',
         'transport' => 'sendmail',
-        'transport_sendmail_command' => '/usr/local/bin/mailpit sendmail -t --smtp-addr 127.0.0.1:1025',
+        'transport_sendmail_command' => '',
         'transport_smtp_encrypt' => '',
         'transport_smtp_password' => '',
         'transport_smtp_server' => '',

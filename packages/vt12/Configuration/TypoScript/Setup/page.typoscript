@@ -1,5 +1,7 @@
 page = PAGE
 
+
+# Setze Standard-Meta-Tags für die Seite
 page.meta {
     viewport = width=device-width, initial-scale=1, shrink-to-fit=no
 }
@@ -16,16 +18,23 @@ page.meta {
 #    )
 #}
 
+
+# Füge zusätzliche Klassen zum <body>-Tag hinzu
 page.bodyTagAdd = class="d-flex flex-column h-100"
 
+
+# Favicon setzen
 page.shortcutIcon = EXT:vt12/Resources/Public/Icons/favicon.ico
 
+
+# Füge CSS-Dateien hinzu
 page.includeCSS {
     bootstrap-icons = EXT:vt12/Resources/Public/Css/bootstrap-icons.css
     styles = EXT:vt12/Resources/Public/Css/styles.css
     custom = EXT:vt12/Resources/Public/Css/custom.css
 }
 
+# Füge JS-Dateien hinzu
 page.includeJSFooter {
     bootstrap = EXT:vt12/Resources/Public/Js/bootstrap.bundle.min.js
     scripts = EXT:vt12/Resources/Public/Js/scripts.js
@@ -33,35 +42,51 @@ page.includeJSFooter {
 }
 
 
+# ---------------------------------------------
+# Haupt-Inhalt per Fluid Template rendern
+# ---------------------------------------------
 page.10 = FLUIDTEMPLATE
 page.10 {
+    # Pfade zu Layout- und Partial-Ordnern setzen
     layoutRootPath = EXT:vt12/Resources/Private/Layouts/
     partialRootPath = EXT:vt12/Resources/Private/Partials/
 
-    #    file = EXT:vt12/Resources/Private/Templates/Default.html
-
+    # Dynamisch entscheiden, welches Template (file) verwendet wird
     file.stdWrap.cObject = CASE
     file.stdWrap.cObject {
+        # Liefert den gewählten oder vererbten Backend-Layout-Key
         key.data = pagelayout
 
+        # Wenn "Layout mit Header" gewählt wurde
         pagets__layoutwithheader = TEXT
         pagets__layoutwithheader.value = EXT:vt12/Resources/Private/Templates/Default.html
 
+        # Wenn "Layout ohne Header" gewählt wurde
         pagets__layoutwithoutheader = TEXT
         pagets__layoutwithoutheader.value = EXT:vt12/Resources/Private/Templates/WithoutHeader.html
 
+        # Wenn kein Layout gesetzt wurde → Default verwenden
         default < pagets__layoutwithheader
     }
 
+
+    # ---------------------------------------------
+    # Inhaltsspalten definieren und an Fluid übergeben
+    # ---------------------------------------------
     variables {
+        # Inhalt aus Standard-Spalte (colPos = 0)
         content0 < styles.content.get
 
+        # Inhalt aus Spalte 1 (colPos = 1)
         content1 < styles.content.get
         content1 {
             select.where = colPos = 1
         }
     }
 
+    # ---------------------------------------------
+    # Konfiguration aus Konstanten in Fluid als {settings.} verfügbar machen
+    # ---------------------------------------------
     settings {
         rootUid = {$vt12.rootUid}
         logoFile = {$vt12.logoFile}

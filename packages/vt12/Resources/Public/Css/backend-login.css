@@ -1,0 +1,69 @@
+.typo3-login .card-login {
+    background-color: #ffffff !important;
+    color: white;
+    border-radius: 16px;
+    box-shadow: -20px 13px 30px 0px rgba(0, 0, 0, 0.5);
+    border: 4px solid #4b47ff;
+}
+
+.typo3-login .form-control {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: black;
+}
+
+.typo3-login .form-control:focus,
+.typo3-login .form-control:hover {
+    border-color: #4B47FF !important;
+    box-shadow: 0 0 0 0.2rem rgba(75, 71, 255, 0.25) !important;
+    outline: none;
+}
+
+.typo3-login .btn-login {
+    background-color: #4A49FF;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 2rem;
+    padding: 0.7rem 1.5rem;
+    transition: background 0.3s ease;
+}
+
+.typo3-login .btn-login:hover {
+    background-color: #02BBE9;
+}
+
+
+.typo3-login .forgot-password a {
+    color: #4B47FF !important;
+    text-decoration: underline;
+}
+
+.typo3-login .forgot-password a:hover {
+    color: #02BBE9 !important;
+}
+
+
+.typo3-login .card-footer,
+.typo3-login .card-footer a,
+.typo3-login .card-footer span,
+.typo3-login .card-footer p {
+    color: #4B47FF !important;
+}
+
+
+.typo3-login .card-footer a:hover {
+    color: #02BBE9 !important;
+    text-decoration: underline;
+}
+
+.typo3-login .card-footer a:hover span {
+    color: #02BBE9 !important;
+}
+
+.typo3-login .card-footer img[src*="typo3_orange.svg"] {
+    filter: brightness(0) saturate(100%) !important;
+}
+
+
+

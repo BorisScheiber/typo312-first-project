@@ -27,7 +27,7 @@ return [
         'backend' => [
             'backendFavicon' => 'EXT:vt12/Resources/Public/Favicons/bs.png',
             'backendLogo' => 'EXT:vt12/Resources/Public/Favicons/bs.png',
-            'loginBackgroundImage' => 'EXT:vt12/Resources/Public/Img/shadow.svg',
+            'loginBackgroundImage' => 'EXT:vt12/Resources/Public/Img/background1.png',
             'loginFootnote' => '',
             'loginHighlightColor' => '#4b47ff',
             'loginLogo' => 'EXT:vt12/Resources/Public/Favicons/bs-180x180.png',

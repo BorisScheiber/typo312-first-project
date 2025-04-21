@@ -37,7 +37,8 @@
         "typo3/cms-webhooks": "^12.4",
         "typo3/cms-workspaces": "^12.4",
         "typo3/minimal": "^12",
-        "boris/vt12": "@dev"
+        "boris/vt12": "@dev",
+        "helhum/typo3-console": "^8.2"
     },
     "config": {
         "allow-plugins": {
@@ -50,5 +51,15 @@
             "type": "path",
             "url": "./packages/*"
         }
+    },
+    "scripts": {
+        "typo3-cms-scripts": [
+            "typo3 install:fixfolderstructure",
+            "typo3 database:updateschema '*.add,*.change'",
+            "typo3 cache:flush"
+        ],
+        "post-autoload-dump": [
+            "@typo3-cms-scripts"
+        ]
     }
 }

@@ -28,4 +28,15 @@ languages:
     flag: en-us-gb
     languageId: 1
 rootPageId: 1
+routeEnhancers:
+  PageTypeSuffix:
+    type: PageType
+    default: /
+    map:
+      sitemap.xml: 1533906435
+routes:
+  -
+    route: robots.txt
+    type: staticText
+    content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /typo3temp/\r\n\r\nSitemap: sitemap.xml\r\n"
 websiteTitle: ''

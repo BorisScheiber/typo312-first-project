@@ -1,3 +1,20 @@
 config {
-admPanel = 1
+    admPanel = 1
+
+
+    compressCss = 1
+    compressJs = 1
+    concatenateCss = 1
+    concatenateJs = 1
 }
+
+[applicationContext == "Development"]
+    config {
+        compressCss = 0
+        compressJs = 0
+        concatenateCss = 0
+        concatenateJs = 0
+    }
+
+[end]
+
